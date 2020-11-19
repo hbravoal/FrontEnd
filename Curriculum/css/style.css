@@ -1,0 +1,124 @@
+/* css variables */ 
+@import url(./partials/_variables.css);
+*{
+    box-sizing: border-box;
+}
+body{
+    background: #fff;
+    font-family: "Open Sans", sans-serif;
+}
+
+header{    
+    max-height: 100px;
+    
+    display: flex;
+    justify-content: space-between;
+    min-width: 90%;
+    margin: auto;
+    
+}
+header img {
+    max-width: 100px;
+    height: 100px;
+    margin-left: 50px;
+    cursor: pointer;
+}
+header nav{
+    padding-top: 42px;
+}
+header nav a{
+    font-size: 1em;
+    margin: 0px 20px;
+    text-decoration: none;
+    border-bottom: 2px solid transparent;
+    color: #000;
+}
+header nav a:hover{
+    color: #854fee;
+    border-bottom: 2px solid #854fee;
+}
+.container {
+    display: flex;    
+    max-width: 90%;
+    margin: auto;
+}
+.principal{
+    background: url('../images/HBravoAl-Background.png');
+    min-height: 500px;
+    background-position-x:100%;
+    background-position-y: 10%;
+}
+
+.texto{
+    height: 100%;
+    width: 70%;
+    display: flex;
+    
+    flex-direction: column;
+    justify-content: space-between;
+    margin: auto;
+}
+
+.imagen-principal img
+{
+ width: 100%;   
+}
+
+.btn{
+    padding: .8rem 2.2rem;
+    font: normal 500 16px/20px var(--roboto);
+    position: relative;
+    border: 3px solid transparent;
+    text-decoration: none;
+    text-align: center;
+}
+.btn-principal{
+    
+    background: var(--gradient-color);
+    background-clip: padding-box;
+    color: whitesmoke;
+    /* transition: background .6s ease; */
+    box-shadow: var(--box-shadow);
+    border-radius: 8px;
+
+}
+.btn-secundario{
+    
+    background: white;
+    background-clip: padding-box;
+    color: var(--title-color);
+    border: 2px solid var(--primary-color);
+    /* box-shadow: var(--box-shadow); */
+    border-radius: 8px;
+    
+}
+
+
+@media (max-width: 600px) {
+    .btn-secundario{
+     width: 70%;
+    }
+    .texto{
+        width: 100%;
+    }
+    .imagen-principal{
+        display: none;
+    }
+    .container{
+
+        display: flex;
+        flex-direction: column;
+    
+    }
+    .buttons{
+        display: flex;
+        flex-direction: column;
+        width: 70%;
+        margin: auto;
+        justify-content: space-between;
+        
+    }
+    .buttons a{
+        padding-bottom: 20px;
+    }
+  }

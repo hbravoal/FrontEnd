@@ -1,0 +1,42 @@
+//Bobones
+
+@mixin boton ($color,$bacground) {
+    background-color: $bacground;
+    padding: 0.5rem 1rem;
+    margin-top: 1rem;
+    display: inline-block;
+    text-decoration: none;
+    text-align: center;
+    color: $color;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+@mixin box-sizing ($box-model) {
+    box-sizing: $box-model;
+    
+}
+@mixin background-image($ruta){
+    background-image: url($ruta);
+    background-repeat: no-repeat;    
+    background-position: center center;    
+}
+
+@mixin telefono{
+    @media only screen and (min-width:#{$telefono}){
+        @content;
+    }
+}
+@mixin tablet{
+    @media only screen and (min-width:#{$tablet}){
+        @content;
+    }
+}
+@mixin escritorio{
+    @media only screen and (min-width:#{$escritorio}){
+        @content;
+    }
+}
+@mixin gradiente($color1,$color2){
+    background: linear-gradient(to right,$color1 0%, $color2 100%);
+}
